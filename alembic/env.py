@@ -23,11 +23,11 @@ if SQLALCHEMY_DATABASE_URL:
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 # from app.models.db_models.base_model import Base
-from customer_service import customer_base
-from supplier_service import supplier_base
-from common import product_base
-
-target_metadata = [customer_base.metadata, supplier_base.metadata, product_base.metadata]
+# from customer_service import customer_base
+# from supplier_service import supplier_base
+# from common import product_base
+from database.pg_connections import Base
+target_metadata = Base.metadata
 
 
 # other values from the config, defined by the needs of env.py,
@@ -36,9 +36,8 @@ target_metadata = [customer_base.metadata, supplier_base.metadata, product_base.
 # ... etc.
 def include_name(name, type_, parent_names):
     if type_ == "schema":
-        print("********************", name)
         # this **will* include the default schema
-        return name in [None, "supplier", "schema_two"]
+        return name in ["supplier", "customer", "products"]
     else:
         return True
 

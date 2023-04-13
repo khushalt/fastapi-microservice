@@ -1,2 +1,2 @@
-from database.pg_connections import supplier_base
+from database.pg_connections import Base
 from supplier_service.supplier_models import Supplier

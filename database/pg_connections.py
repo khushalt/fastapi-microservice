@@ -10,6 +10,8 @@ engine = create_engine(
 )
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-customer_base = declarative_base(metadata=MetaData(schema="customer"))
-supplier_base = declarative_base(metadata=MetaData(schema="supplier"))
-product_base = declarative_base(metadata=MetaData(schema="products"))
+Base = declarative_base()
+
+# customer_base = declarative_base(metadata=MetaData(schema="customer"))
+# supplier_base = declarative_base(metadata=MetaData(schema="supplier"))
+# product_base = declarative_base(metadata=MetaData(schema="products"))

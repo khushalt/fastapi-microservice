@@ -1,2 +1,2 @@
-from database.pg_connections import product_base
+from database.pg_connections import Base
 from common.models import Products
