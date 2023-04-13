@@ -1,0 +1,13 @@
+.vscode
+.idea
+__pycache__
+.venv/
+/bin
+/lib
+/lib64
+.flake8
+/pyvenv.cfg
+/include
+/.env
+/pre-commit-config.yaml
+/venv

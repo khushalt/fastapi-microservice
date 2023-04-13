@@ -1,0 +1,2 @@
+from database.pg_connections import customer_base
+from customer_service.customer_models import Customer
